@@ -64,7 +64,7 @@ namespace NServiceBusNavigator
             // then >
             // then any text 
             // then end of line
-            ServiceHelper.FindPattern($"^.*\\.(Publish|Send)\\s*<\\s*{ServiceHelper.GetSelectedText(ServiceProvider)}\\s*>*.$", ServiceProvider);
+            ServiceHelper.FindPattern($"(Publish|Send|Reply)\\s*<\\s*{ServiceHelper.GetSelectedText(ServiceProvider)}\\s*>", ServiceProvider);
         }
     }
 }

@@ -7,9 +7,9 @@ namespace NServiceBusNavigator
 {
     internal sealed class FindIAmStartedBy
     {
-        public const int CommandId = 256;
+        public const int CommandId = 0x0101;
 
-        public static readonly Guid CommandSet = new Guid("f01665b9-2905-4505-afcd-0a671e28e57c");
+        public static readonly Guid CommandSet = new Guid("6850066e-e30e-49cc-a144-066cc01f2944");
 
         private readonly AsyncPackage package;
 
@@ -57,9 +57,7 @@ namespace NServiceBusNavigator
             // then the selected text
             // then any number of spaces
             // then >
-            // then any text 
-            // then end of line
-            ServiceHelper.FindPattern($"^.*\\.(IAmStartedBy)\\s*<\\s*{ServiceHelper.GetSelectedText(ServiceProvider)}\\s*>*.$", ServiceProvider);
+            ServiceHelper.FindPattern($"IAmStartedBy\\s*<\\s*{ServiceHelper.GetSelectedText(ServiceProvider)}\\s*>", ServiceProvider);
         }
     }
 }
