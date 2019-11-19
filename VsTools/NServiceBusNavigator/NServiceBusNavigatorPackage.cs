@@ -48,7 +48,8 @@ namespace NServiceBusNavigator
             // Do any initialization that requires the UI thread after switching to the UI thread.
             await this.JoinableTaskFactory.SwitchToMainThreadAsync(cancellationToken);
             await FindSendAndPublish.InitializeAsync(this);
-            await FindIAmStartedBy.InitializeAsync(this);
+            await FindIAmStartedByMessages.InitializeAsync(this);
+            await FindIHandleMessages.InitializeAsync(this);
         }
 
         #endregion

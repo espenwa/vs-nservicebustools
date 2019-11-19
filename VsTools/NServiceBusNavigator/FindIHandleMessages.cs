@@ -5,15 +5,15 @@ using Task = System.Threading.Tasks.Task;
 
 namespace NServiceBusNavigator
 {
-    internal sealed class FindIAmStartedByMessages
+    internal sealed class FindIHandleMessages
     {
-        public const int CommandId = 0x0101;
+        public const int CommandId = 0x0102;
 
         public static readonly Guid CommandSet = new Guid("6850066e-e30e-49cc-a144-066cc01f2944");
 
         private readonly AsyncPackage package;
 
-        private FindIAmStartedByMessages(AsyncPackage package, OleMenuCommandService commandService)
+        private FindIHandleMessages(AsyncPackage package, OleMenuCommandService commandService)
         {
             this.package = package ?? throw new ArgumentNullException(nameof(package));
             commandService = commandService ?? throw new ArgumentNullException(nameof(commandService));
@@ -23,7 +23,7 @@ namespace NServiceBusNavigator
             commandService.AddCommand(menuItem);
         }
 
-        public static FindIAmStartedByMessages Instance
+        public static FindIHandleMessages Instance
         {
             get;
             private set;
@@ -44,7 +44,7 @@ namespace NServiceBusNavigator
             await ThreadHelper.JoinableTaskFactory.SwitchToMainThreadAsync(package.DisposalToken);
 
             OleMenuCommandService commandService = await package.GetServiceAsync(typeof(IMenuCommandService)) as OleMenuCommandService;
-            Instance = new FindIAmStartedByMessages(package, commandService);
+            Instance = new FindIHandleMessages(package, commandService);
         }
 
         private void Execute(object sender, EventArgs e)
@@ -57,7 +57,7 @@ namespace NServiceBusNavigator
             // then the selected text
             // then any number of spaces
             // then >
-            ServiceHelper.FindPattern($"IAmStartedByMessages\\s*<\\s*{ServiceHelper.GetSelectedText(ServiceProvider)}\\s*>", ServiceProvider);
+            ServiceHelper.FindPattern($"IHandleMessages\\s*<\\s*{ServiceHelper.GetSelectedText(ServiceProvider)}\\s*>", ServiceProvider);
         }
     }
 }

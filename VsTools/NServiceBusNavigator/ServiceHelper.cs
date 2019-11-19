@@ -15,6 +15,7 @@ namespace NServiceBusNavigator
             dteObject.Find.PatternSyntax = vsFindPatternSyntax.vsFindPatternSyntaxRegExpr;
             dteObject.Find.Action = vsFindAction.vsFindActionFindAll;
             dteObject.Find.Backwards = false;
+            dteObject.Find.Target = vsFindTarget.vsFindTargetSolution;
             //dteObject.Find.ResultsLocation = vsFindResultsLocation.vsFindResultsNone;
             dteObject.Find.ResultsLocation = vsFindResultsLocation.vsFindResults1;
             dteObject.Find.MatchWholeWord = false;

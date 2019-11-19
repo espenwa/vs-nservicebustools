@@ -58,24 +58,30 @@
           <ButtonText>Find Send and Publish</ButtonText>
         </Strings>
       </Button>
-      <Button guid="guidNServiceBusNavigatorPackageCmdSet" id="FindIAmStartedById" priority="0x0100" type="Button">
+      <Button guid="guidNServiceBusNavigatorPackageCmdSet" id="FindIAmStartedByMessagesId" priority="0x0100" type="Button">
         <Parent guid="guidNServiceBusNavigatorPackageCmdSet" id="VpVsToolsEditorContextMenuGroup" />
         <Strings>
-          <ButtonText>Find IAmStartedBy</ButtonText>
+          <ButtonText>Find IAmStartedByMessages</ButtonText>
+        </Strings>
+      </Button>
+      <Button guid="guidNServiceBusNavigatorPackageCmdSet" id="FindIHandleMessagesId" priority="0x0100" type="Button">
+        <Parent guid="guidNServiceBusNavigatorPackageCmdSet" id="VpVsToolsEditorContextMenuGroup" />
+        <Strings>
+          <ButtonText>Find IHandleMessages</ButtonText>
         </Strings>
       </Button>
     </Buttons>
 
     <!--The bitmaps section is used to define the bitmaps that are used for the commands.-->
-    <Bitmaps>
-      <!--  The bitmap id is defined in a way that is a little bit different from the others:
+    <!--<Bitmaps>
+      --><!--  The bitmap id is defined in a way that is a little bit different from the others:
             the declaration starts with a guid for the bitmap strip, then there is the resource id of the
             bitmap strip containing the bitmaps and then there are the numeric ids of the elements used
             inside a button definition. An important aspect of this declaration is that the element id
-            must be the actual index (1-based) of the bitmap inside the bitmap strip. -->
+            must be the actual index (1-based) of the bitmap inside the bitmap strip. --><!--
       <Bitmap guid="guidImages" href="Resources\FindSendAndPublish.png" usedList="bmpPic1, bmpPic2, bmpPicSearch, bmpPicX, bmpPicArrows, bmpPicStrikethrough" />
-      <Bitmap guid="guidImages1" href="Resources\FindIAmStartedBy.png" usedList="bmpPic1, bmpPic2, bmpPicSearch, bmpPicX, bmpPicArrows, bmpPicStrikethrough" />
-    </Bitmaps>
+      <Bitmap guid="guidImages1" href="Resources\FindIAmStartedByMessages.png" usedList="bmpPic1, bmpPic2, bmpPicSearch, bmpPicX, bmpPicArrows, bmpPicStrikethrough" />
+    </Bitmaps>-->
   </Commands>
 
   <Symbols>
@@ -86,7 +92,8 @@
     <GuidSymbol name="guidNServiceBusNavigatorPackageCmdSet" value="{6850066e-e30e-49cc-a144-066cc01f2944}">
       <IDSymbol name="VpVsToolsEditorContextMenuGroup" value="0x1020" />
       <IDSymbol name="FindSendAndPublishId" value="0x0100" />
-      <IDSymbol name="FindIAmStartedById" value="0x0101" />
+      <IDSymbol name="FindIAmStartedByMessagesId" value="0x0101" />
+      <IDSymbol name="FindIHandleMessagesId" value="0x0102" />
     </GuidSymbol>
 
     <GuidSymbol name="guidImages" value="{8e3e9d7d-53e3-4d3c-a260-f5061eeb785e}">
@@ -97,12 +104,7 @@
       <IDSymbol name="bmpPicArrows" value="5" />
       <IDSymbol name="bmpPicStrikethrough" value="6" />
     </GuidSymbol>
-  
-    <GuidSymbol value="{f01665b9-2905-4505-afcd-0a671e28e57c}" name="guidNServiceBusNavigatorPackageCmdSet1">
-      <IDSymbol value="4128" name="MyMenuGroup" />
-      <IDSymbol value="256" name="cmdidFindIAmStartedBy" />
-    </GuidSymbol>
-  
+   
     <GuidSymbol value="{a98c0a62-a424-484c-a712-eccfcac77736}" name="guidImages1">
       <IDSymbol name="bmpPic1" value="1" />
       <IDSymbol name="bmpPic2" value="2" />
