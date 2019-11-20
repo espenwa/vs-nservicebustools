@@ -50,7 +50,7 @@ namespace NServiceBusNavigator
         private void Execute(object sender, EventArgs e)
         {
             ThreadHelper.ThrowIfNotOnUIThread();
-            ServiceHelper.FindPattern($"Task\\s*Handle\\s*(\\s*{ServiceHelper.GetSelectedText(ServiceProvider)}", ServiceProvider);
+            ServiceHelper.FindPattern($"Task\\s*Handle\\s*\\(\\s*{ServiceHelper.GetSelectedText(ServiceProvider)}", ServiceProvider);
         }
     }
 }
