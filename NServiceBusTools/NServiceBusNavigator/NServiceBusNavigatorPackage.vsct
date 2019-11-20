@@ -55,19 +55,25 @@
       <Button guid="guidNServiceBusNavigatorPackageCmdSet" id="FindSendAndPublishId" priority="0x0100" type="Button">
         <Parent guid="guidNServiceBusNavigatorPackageCmdSet" id="NServiceBusToolsEditorContextMenuGroup" />
         <Strings>
-          <ButtonText>Find Send and Publish</ButtonText>
+          <ButtonText>Find Send&lt;...&gt; and Publish&lt;...&gt;</ButtonText>
         </Strings>
       </Button>
       <Button guid="guidNServiceBusNavigatorPackageCmdSet" id="FindIAmStartedByMessagesId" priority="0x0100" type="Button">
         <Parent guid="guidNServiceBusNavigatorPackageCmdSet" id="NServiceBusToolsEditorContextMenuGroup" />
         <Strings>
-          <ButtonText>Find IAmStartedByMessages</ButtonText>
+          <ButtonText>Find IAmStartedByMessages&lt;...&gt;</ButtonText>
         </Strings>
       </Button>
       <Button guid="guidNServiceBusNavigatorPackageCmdSet" id="FindIHandleMessagesId" priority="0x0100" type="Button">
         <Parent guid="guidNServiceBusNavigatorPackageCmdSet" id="NServiceBusToolsEditorContextMenuGroup" />
         <Strings>
-          <ButtonText>Find IHandleMessages</ButtonText>
+          <ButtonText>Find IHandleMessages&lt;...&gt;</ButtonText>
+        </Strings>
+      </Button>
+      <Button guid="guidNServiceBusNavigatorPackageCmdSet" id="FindTaskHandleId" priority="0x0100" type="Button">
+        <Parent guid="guidNServiceBusNavigatorPackageCmdSet" id="NServiceBusToolsEditorContextMenuGroup" />
+        <Strings>
+          <ButtonText>Find Task Handle&lt;...&gt;</ButtonText>
         </Strings>
       </Button>
     </Buttons>
@@ -94,6 +100,7 @@
       <IDSymbol name="FindSendAndPublishId" value="0x0100" />
       <IDSymbol name="FindIAmStartedByMessagesId" value="0x0101" />
       <IDSymbol name="FindIHandleMessagesId" value="0x0102" />
+      <IDSymbol name="FindTaskHandleId" value="0x0103" />
     </GuidSymbol>
 
     <GuidSymbol name="guidImages" value="{8e3e9d7d-53e3-4d3c-a260-f5061eeb785e}">

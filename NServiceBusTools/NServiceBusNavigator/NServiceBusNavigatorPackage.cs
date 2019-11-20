@@ -50,6 +50,7 @@ namespace NServiceBusNavigator
             await FindSendAndPublish.InitializeAsync(this);
             await FindIAmStartedByMessages.InitializeAsync(this);
             await FindIHandleMessages.InitializeAsync(this);
+            await FindTaskHandle.InitializeAsync(this);
         }
 
         #endregion
