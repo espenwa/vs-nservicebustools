@@ -36,7 +36,7 @@
          group as the part of a menu contained between two lines. The parent of a group
          must be a menu. -->
     <Groups>
-      <Group guid="guidNServiceBusNavigatorPackageCmdSet" id="VpVsToolsEditorContextMenuGroup" priority="0x0600">
+      <Group guid="guidNServiceBusNavigatorPackageCmdSet" id="NServiceBusToolsEditorContextMenuGroup" priority="0x0600">
         <Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_CODEWIN" />
       </Group>
     </Groups>
@@ -53,19 +53,19 @@
               <CommandFlag>DynamicVisibility</CommandFlag>
           If you do not want an image next to your command, remove the Icon node /> -->
       <Button guid="guidNServiceBusNavigatorPackageCmdSet" id="FindSendAndPublishId" priority="0x0100" type="Button">
-        <Parent guid="guidNServiceBusNavigatorPackageCmdSet" id="VpVsToolsEditorContextMenuGroup" />
+        <Parent guid="guidNServiceBusNavigatorPackageCmdSet" id="NServiceBusToolsEditorContextMenuGroup" />
         <Strings>
           <ButtonText>Find Send and Publish</ButtonText>
         </Strings>
       </Button>
       <Button guid="guidNServiceBusNavigatorPackageCmdSet" id="FindIAmStartedByMessagesId" priority="0x0100" type="Button">
-        <Parent guid="guidNServiceBusNavigatorPackageCmdSet" id="VpVsToolsEditorContextMenuGroup" />
+        <Parent guid="guidNServiceBusNavigatorPackageCmdSet" id="NServiceBusToolsEditorContextMenuGroup" />
         <Strings>
           <ButtonText>Find IAmStartedByMessages</ButtonText>
         </Strings>
       </Button>
       <Button guid="guidNServiceBusNavigatorPackageCmdSet" id="FindIHandleMessagesId" priority="0x0100" type="Button">
-        <Parent guid="guidNServiceBusNavigatorPackageCmdSet" id="VpVsToolsEditorContextMenuGroup" />
+        <Parent guid="guidNServiceBusNavigatorPackageCmdSet" id="NServiceBusToolsEditorContextMenuGroup" />
         <Strings>
           <ButtonText>Find IHandleMessages</ButtonText>
         </Strings>
@@ -90,7 +90,7 @@
 
     <!-- This is the guid used to group the menu commands together -->
     <GuidSymbol name="guidNServiceBusNavigatorPackageCmdSet" value="{6850066e-e30e-49cc-a144-066cc01f2944}">
-      <IDSymbol name="VpVsToolsEditorContextMenuGroup" value="0x1020" />
+      <IDSymbol name="NServiceBusToolsEditorContextMenuGroup" value="0x1020" />
       <IDSymbol name="FindSendAndPublishId" value="0x0100" />
       <IDSymbol name="FindIAmStartedByMessagesId" value="0x0101" />
       <IDSymbol name="FindIHandleMessagesId" value="0x0102" />
